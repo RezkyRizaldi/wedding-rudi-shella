@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--swiper-theme-color: rgb(30 41 59 / var(--tw-bg-opacity)) !important;
+}
+
+@layer components {
+	.btn {
+		@apply rounded-lg bg-slate-800 px-4 py-2 font-semibold text-white transition-colors hover:bg-slate-900 focus:ring focus:ring-slate-500;
+	}
+}
