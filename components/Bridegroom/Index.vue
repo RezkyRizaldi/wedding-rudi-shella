@@ -1,17 +1,17 @@
 <template>
-	<section class="bg-slate-800 text-center">
-		<div class="py-24">
-			<h2 class="font-body text-7xl text-yellow-300/90">Pengantin</h2>
-			<h5 class="mt-5 text-white">Maha suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah rahmatilah pernikahan putra-putri kami</h5>
+	<section class="bg-slate-800 text-center md:pb-10 lg:pb-6">
+		<div class="mx-auto max-w-2xl py-12 md:py-24">
+			<h2 class="font-body text-5xl text-yellow-300/90 md:text-7xl">Pengantin</h2>
+			<h5 class="mx-auto mt-5 max-w-xs text-sm text-white md:max-w-full">Maha suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah rahmatilah pernikahan putra-putri kami</h5>
 		</div>
-		<div class="flex items-center justify-evenly">
+		<div class="mx-auto flex max-w-2xl flex-col items-center justify-evenly gap-y-10 md:flex-row md:gap-y-0 lg:max-w-full">
 			<BridegroomProfile name="Rudi">
 				<template v-slot:family>Putra ke- dari Bapak ... & Ibu ...</template>
 				<template v-slot:social>
 					<FontAwesomeIcon :icon="['fab', 'instagram']" size="lg" inverse />
 				</template>
 			</BridegroomProfile>
-			<span class="-mt-52 font-body text-7xl text-white">&</span>
+			<span class="font-body text-5xl text-white md:-mt-52 md:text-7xl">&</span>
 			<BridegroomProfile name="Shella">
 				<template v-slot:family>Putri ke- dari Bapak ... & Ibu ...</template>
 				<template v-slot:social>

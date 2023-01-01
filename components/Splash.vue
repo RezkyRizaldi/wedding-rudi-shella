@@ -11,10 +11,10 @@
 
 <script setup>
 	const handleTransition = () => {
-		const html = document.querySelector('html');
+		const main = document.querySelector('main');
 		const splash = document.getElementById('splash');
 
-		html.classList.remove('overflow-hidden');
+		main.classList.remove('overflow-hidden');
 		splash.classList.add('opacity-0', 'hidden');
 	};
 </script>

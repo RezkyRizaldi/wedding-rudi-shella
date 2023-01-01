@@ -3,7 +3,6 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			htmlAttrs: {
-				class: 'overflow-hidden',
 				lang: 'en',
 				translate: 'no',
 			},
@@ -71,5 +70,10 @@ export default defineNuxtConfig({
 	ssr: false,
 	typescript: {
 		shim: false,
+	},
+	vue: {
+		compilerOptions: {
+			isCustomElement: (tag) => ['sodipodi:namedview', 'dc:format', 'dc:type', 'dc:title', 'cc:Work', 'rdf:RDF'].includes(tag),
+		},
 	},
 });

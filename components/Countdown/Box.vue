@@ -1,5 +1,5 @@
 <template>
-	<div class="rounded-2xl bg-white/50 py-4 px-10 text-yellow-800">
+	<div class="flex flex-col items-center justify-center rounded-2xl bg-white/50 py-6 text-yellow-800 md:py-4">
 		<span class="text-4xl font-semibold">{{ time }}</span>
 		<span class="block font-serif text-xs">{{ desc }}</span>
 	</div>

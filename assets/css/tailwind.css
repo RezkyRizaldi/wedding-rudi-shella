@@ -8,6 +8,6 @@
 
 @layer components {
 	.btn {
-		@apply rounded-lg bg-slate-800 px-4 py-2 font-semibold text-white transition-colors hover:bg-slate-900 focus:ring focus:ring-slate-500;
+		@apply rounded-lg bg-slate-800 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-slate-900 focus:ring focus:ring-slate-500 active:ring active:ring-slate-500 md:text-base;
 	}
 }

@@ -1,8 +1,8 @@
 <template>
-	<main class="antialiased">
+	<main class="overflow-hidden antialiased">
 		<Splash />
 		<About />
-		<Wave />
+		<Wave class="-mt-36" />
 		<Verse />
 		<Bridegroom />
 		<Wave />

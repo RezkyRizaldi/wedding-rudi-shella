@@ -1,5 +1,5 @@
 <template>
-	<section class="bg-stone-200 pt-10 pb-24">
+	<section class="bg-stone-200 pt-6 pb-10 md:pt-10 md:pb-20">
 		<figure class="mx-auto w-3/4">
 			<blockquote class="text-center">
 				<p class="text-xs leading-loose">
