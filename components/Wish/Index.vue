@@ -33,7 +33,7 @@
 							</div>
 						</div>
 						<div class="text-right">
-							<button class="btn" type="submit">Kirim</button>
+							<button class="btn" type="submit" title="Kirim Pesan">Kirim</button>
 						</div>
 					</form>
 					<div class="max-h-40 w-full divide-y-2 overflow-y-scroll pr-4">
@@ -44,8 +44,8 @@
 			<div class="mt-12 flex flex-col-reverse items-center justify-center gap-y-10 md:mt-24 md:flex-row md:gap-y-0 md:gap-x-10">
 				<NuxtImg class="rounded-lg" src="https://via.placeholder.com/400x300?text=Bride+image" />
 				<div class="space-y-8 text-center">
-					<p class="text-sm text-white md:text-base">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan do'a restunya untuk keberkahan pernikahan kami.</p>
-					<p class="text-sm text-white md:text-base">Atas do'a dam restunya, kami ucapkan terima kasih.</p>
+					<p class="text-sm text-white md:text-base">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila {{ recipient }} berkenan hadir dan memberikan do'a restunya untuk keberkahan pernikahan kami.</p>
+					<p class="text-sm text-white md:text-base">Atas do'a dan restunya, kami ucapkan terima kasih.</p>
 					<h2 class="font-serif text-3xl text-yellow-300/90">Rudi & Shella</h2>
 				</div>
 			</div>
@@ -53,4 +53,6 @@
 	</section>
 </template>
 
-<script setup></script>
+<script setup>
+	const { recipient } = defineProps({ recipient: String });
+</script>

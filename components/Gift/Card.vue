@@ -7,7 +7,7 @@
 			<hr class="h-0.5 bg-slate-800" />
 			<span class="block text-sm font-bold uppercase tracking-[0.3em] md:text-base">Nama Pemilik</span>
 			<span class="block text-sm font-bold uppercase tracking-[0.3em] md:text-base">0000-999-000</span>
-			<button class="flex w-full items-center justify-center rounded bg-blue-800 px-4 py-1.5 text-sm text-white md:text-base" type="button" @click="copy('xxxxxxxx')">
+			<button class="flex w-full items-center justify-center rounded bg-blue-800 px-4 py-1.5 text-sm text-white md:text-base" type="button" @click="copy('xxxxxxxx')" title="Salin ke Clipboard">
 				<FontAwesomeIcon :icon="['fas', 'copy']" />
 				<span id="btnText" class="flex-1">Salin</span>
 			</button>
@@ -19,6 +19,6 @@
 	const copy = async (text) => {
 		await navigator.clipboard.writeText(text);
 
-		document.querySelector('#btnText').innerHTML = 'Berhasil disalin!';
+		document.getElementById('btnText').innerHTML = 'Berhasil disalin!';
 	};
 </script>

@@ -6,16 +6,16 @@
 		</div>
 		<div class="mx-auto flex max-w-2xl flex-col items-center justify-evenly gap-y-10 md:flex-row md:gap-y-0 lg:max-w-full">
 			<BridegroomProfile name="Rudi">
-				<template v-slot:family>Putra ke- dari Bapak ... & Ibu ...</template>
-				<template v-slot:social>
-					<FontAwesomeIcon :icon="['fab', 'instagram']" size="lg" inverse />
+				<template #family>Putra ke- dari Bapak ... & Ibu ...</template>
+				<template #social="{ icon }">
+					<FontAwesomeIcon :icon="['fab', icon]" size="lg" inverse />
 				</template>
 			</BridegroomProfile>
 			<span class="font-body text-5xl text-white md:-mt-52 md:text-7xl">&</span>
 			<BridegroomProfile name="Shella">
-				<template v-slot:family>Putri ke- dari Bapak ... & Ibu ...</template>
-				<template v-slot:social>
-					<FontAwesomeIcon :icon="['fab', 'instagram']" size="lg" inverse />
+				<template #family>Putri ke- dari Bapak ... & Ibu ...</template>
+				<template #social="{ icon }">
+					<FontAwesomeIcon :icon="['fab', icon]" size="lg" inverse />
 				</template>
 			</BridegroomProfile>
 		</div>

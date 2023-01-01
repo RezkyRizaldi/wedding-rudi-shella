@@ -7,7 +7,7 @@
 			</div>
 			<div class="mx-auto w-3/4 md:w-2/3">
 				<h5 class="mt-5 text-sm text-white md:text-lg">
-					Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk dapat hadir pada acara <span class="font-semibold">Resepsi Pernikahan</span> putra dan putri kami yang insya Allah akan dilaksanakan pada
+					Tanpa mengurangi rasa hormat, kami mengundang {{ recipient }} untuk dapat hadir pada acara <span class="font-semibold">Resepsi Pernikahan</span> putra dan putri kami yang insya Allah akan dilaksanakan pada
 				</h5>
 			</div>
 		</div>
@@ -20,4 +20,6 @@
 	</section>
 </template>
 
-<script setup></script>
+<script setup>
+	const { recipient } = defineProps({ recipient: String });
+</script>

@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
 	app: {
 		head: {
+			bodyAttrs: {
+				class: 'overflow-hidden scroll-smooth',
+			},
 			htmlAttrs: {
 				lang: 'en',
 				translate: 'no',
@@ -44,9 +47,6 @@ export default defineNuxtConfig({
 		transpile: ['@fortawesome/vue-fontawesome', '@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', '@fortawesome/free-regular-svg-icons', '@fortawesome/free-brands-svg-icons'],
 	},
 	css: ['@fortawesome/fontawesome-svg-core/styles.css'],
-	// generate: {
-	// 	routes: ['/'],
-	// },
 	googleFonts: {
 		families: {
 			Roboto: true,
@@ -59,11 +59,6 @@ export default defineNuxtConfig({
 		},
 	},
 	modules: ['@nuxt/image-edge', '@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxtjs/color-mode', 'nuxt-swiper'],
-	// routeRules: {
-	// 	'/': {
-	// 		static: true,
-	// 	},
-	// },
 	runtimeConfig: {
 		appName: process.env.APP_NAME,
 	},

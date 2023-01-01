@@ -17,7 +17,7 @@
 			<p class="font-serif text-sm text-slate-800 md:text-base">Jl. alamat RT 11 RW 02, Bandung</p>
 		</div>
 		<div class="mt-8">
-			<NuxtLink class="btn" to="/" target="_blank" rel="noopener noreferrer">
+			<NuxtLink class="btn" to="/" target="_blank" rel="noopener noreferrer" title="Lihat Maps">
 				<FontAwesomeIcon class="mr-2" :icon="['fas', 'paper-plane']" inverse />
 				Lihat Maps
 			</NuxtLink>

@@ -9,7 +9,7 @@
 				<h5 class="my-6 text-center font-semibold md:my-8">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless.</h5>
 				<Disclosure>
 					<div class="text-center">
-						<DisclosureButton class="btn">
+						<DisclosureButton class="btn" title="Beri Kado">
 							<FontAwesomeIcon class="mr-2" :icon="['fas', 'gift']" />
 							Beri Kado
 						</DisclosureButton>

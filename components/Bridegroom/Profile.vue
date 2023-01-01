@@ -6,9 +6,14 @@
 			<h5 class="font-bold text-white lg:text-xl">
 				<slot name="family" />
 			</h5>
-			<BridegroomSocial url="https://instagram.com/">
-				<slot name="social" />
-			</BridegroomSocial>
+			<div class="flex w-full items-center justify-center gap-x-10">
+				<BridegroomSocial url="https://instagram.com/" title="Instagram">
+					<slot name="social" icon="instagram" />
+				</BridegroomSocial>
+				<BridegroomSocial url="https://facebook.com/" title="Facebook">
+					<slot name="social" icon="facebook" />
+				</BridegroomSocial>
+			</div>
 		</div>
 	</div>
 </template>
