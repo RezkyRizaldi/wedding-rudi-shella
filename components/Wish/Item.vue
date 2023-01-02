@@ -1,7 +1,7 @@
 <template>
 	<div class="flex gap-x-3 py-4">
 		<div class="h-8 w-8 overflow-hidden">
-			<NuxtImg class="rounded-full object-contain" src="https://via.placeholder.com/200x200?text=B" />
+			<NuxtImg class="rounded-full object-contain" src="https://via.placeholder.com/200x200?text=B" alt="Name" loading="lazy" />
 		</div>
 		<div class="flex-1">
 			<h2 class="inline-block font-bold">Nama</h2>

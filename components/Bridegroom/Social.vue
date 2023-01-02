@@ -6,14 +6,8 @@
 
 <script setup>
 	const { title, url } = defineProps({
-		title: {
-			type: String,
-			required: true,
-		},
-		url: {
-			type: String,
-			required: true,
-		},
+		title: { type: String, required: true },
+		url: { type: String, required: true },
 	});
 
 	const bgColor = computed(() => (title === 'Instagram' ? 'bg-[#C13584]' : 'bg-[#1877F2]'));

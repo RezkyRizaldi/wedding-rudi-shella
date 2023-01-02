@@ -46,7 +46,7 @@ export default defineNuxtConfig({
 	build: {
 		transpile: ['@fortawesome/vue-fontawesome', '@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', '@fortawesome/free-regular-svg-icons', '@fortawesome/free-brands-svg-icons'],
 	},
-	css: ['@fortawesome/fontawesome-svg-core/styles.css'],
+	css: ['@fortawesome/fontawesome-svg-core/styles.css', 'aos/dist/aos.css'],
 	googleFonts: {
 		families: {
 			Roboto: true,
@@ -57,8 +57,9 @@ export default defineNuxtConfig({
 			},
 			Parisienne: true,
 		},
+		preload: true,
 	},
-	modules: ['@nuxt/image-edge', '@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxtjs/color-mode', 'nuxt-swiper'],
+	modules: ['@nuxt/image-edge', '@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxtjs/color-mode', 'nuxt-swiper', '@nuxtjs/html-validator'],
 	runtimeConfig: {
 		appName: process.env.APP_NAME,
 	},

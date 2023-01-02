@@ -1,8 +1,8 @@
 <template>
-	<section class="bg-slate-800">
+	<section class="bg-slate-800" id="wish">
 		<div class="mx-auto max-w-xs py-12 md:max-w-2xl md:py-16 lg:max-w-4xl">
-			<h2 class="text-center font-serif text-2xl uppercase tracking-widest text-white md:text-4xl">Harapan & Do'a</h2>
-			<h5 class="mt-4 mb-10 text-center font-serif text-sm italic text-white md:text-base">Sampaikan do'a dan ucapan terbaik Anda untuk kedua mempelai.</h5>
+			<h2 class="text-center font-serif text-2xl uppercase tracking-widest text-white md:text-4xl" data-aos="zoom-in" data-aos-duration="750">Harapan & Do'a</h2>
+			<h5 class="mt-4 mb-10 text-center font-serif text-sm italic text-white md:text-base" data-aos="zoom-in" data-aos-duration="750">Sampaikan do'a dan ucapan terbaik Anda untuk kedua mempelai.</h5>
 			<div class="rounded-2xl bg-white p-10">
 				<div class="space-y-6">
 					<span class="block text-center font-semibold">11 Komentar</span>
@@ -42,11 +42,13 @@
 				</div>
 			</div>
 			<div class="mt-12 flex flex-col-reverse items-center justify-center gap-y-10 md:mt-24 md:flex-row md:gap-y-0 md:gap-x-10">
-				<NuxtImg class="rounded-lg" src="https://via.placeholder.com/400x300?text=Bride+image" />
+				<NuxtImg class="rounded-lg" src="https://via.placeholder.com/400x300?text=Bride+image" alt="Bride Image" loading="lazy" data-aos="fade-right" data-aos-duration="1000" />
 				<div class="space-y-8 text-center">
-					<p class="text-sm text-white md:text-base">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila {{ recipient }} berkenan hadir dan memberikan do'a restunya untuk keberkahan pernikahan kami.</p>
-					<p class="text-sm text-white md:text-base">Atas do'a dan restunya, kami ucapkan terima kasih.</p>
-					<h2 class="font-serif text-3xl text-yellow-300/90">Rudi & Shella</h2>
+					<p class="text-sm text-white md:text-base" data-aos="fade-down" data-aos-duration="1000">
+						Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila {{ recipient }} berkenan hadir dan memberikan do'a restunya untuk keberkahan pernikahan kami.
+					</p>
+					<p class="text-sm text-white md:text-base" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">Atas do'a dan restunya, kami ucapkan terima kasih.</p>
+					<h2 class="font-serif text-3xl text-yellow-300/90" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">Rudi & Shella</h2>
 				</div>
 			</div>
 		</div>

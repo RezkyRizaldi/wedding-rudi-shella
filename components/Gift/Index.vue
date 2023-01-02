@@ -1,5 +1,5 @@
 <template>
-	<section class="bg-slate-800">
+	<section class="bg-slate-800" id="gift">
 		<div class="mx-auto max-w-xs py-16 md:max-w-2xl lg:max-w-4xl">
 			<div class="rounded-2xl bg-stone-200 p-10">
 				<h2 class="text-center font-body text-4xl text-yellow-800 md:text-5xl">Kado Pernikahan</h2>

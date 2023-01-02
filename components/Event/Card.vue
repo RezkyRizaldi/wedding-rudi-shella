@@ -27,18 +27,9 @@
 
 <script setup>
 	const { icon, title, time } = defineProps({
-		icon: {
-			type: String,
-			required: true,
-		},
-		title: {
-			type: String,
-			required: true,
-		},
-		time: {
-			type: String,
-			required: true,
-		},
+		icon: { type: String, required: true },
+		title: { type: String, required: true },
+		time: { type: String, required: true },
 	});
 </script>
 a

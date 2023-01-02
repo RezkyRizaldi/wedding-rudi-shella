@@ -1,5 +1,6 @@
 <template>
 	<main class="overflow-hidden antialiased">
+		<audio class="hidden" id="audio" loop src="/audio/bgm.mp3"></audio>
 		<Splash :recipient="recipient" />
 		<About />
 		<Wave class="-mt-36" />
@@ -16,7 +17,7 @@
 		<Footer />
 		<BackToTop />
 		<Tools />
-		<audio class="hidden" id="audio" loop src="/audio/bgm.mp3"></audio>
+		<!-- <Navbar /> -->
 	</main>
 </template>
 

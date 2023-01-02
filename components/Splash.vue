@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-	const { recipient } = defineProps({ recipient: String });
+	const { recipient } = defineProps({ recipient: { type: String, required: true } });
 
 	const loadPage = () => {
 		const main = document.querySelector('main');

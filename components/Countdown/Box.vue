@@ -6,14 +6,8 @@
 </template>
 
 <script setup>
-	const { desc } = defineProps({
-		time: {
-			type: Number,
-			required: true,
-		},
-		desc: {
-			type: String,
-			required: true,
-		},
+	const { desc, time } = defineProps({
+		time: { type: Number, required: true },
+		desc: { type: String, required: true },
 	});
 </script>
