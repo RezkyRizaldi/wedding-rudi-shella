@@ -6,9 +6,9 @@
 				<hr class="text-white" />
 			</div>
 			<div class="mx-auto w-3/4 md:w-2/3" data-aos="zoom-in" data-aos-duration="750">
-				<h5 class="mt-5 text-sm text-white md:text-lg">
+				<h3 class="mt-5 text-sm text-white md:text-lg">
 					Tanpa mengurangi rasa hormat, kami mengundang {{ recipient }} untuk dapat hadir pada acara <span class="font-semibold">Resepsi Pernikahan</span> putra dan putri kami yang insya Allah akan dilaksanakan pada
-				</h5>
+				</h3>
 			</div>
 		</div>
 		<div class="mx-auto max-w-xs lg:max-w-4xl">
@@ -20,6 +20,8 @@
 	</section>
 </template>
 
-<script setup>
-	const { recipient } = defineProps({ recipient: { type: String, required: true } });
+<script setup lang="ts">
+	import type { LocationQueryValue } from 'vue-router';
+
+	const { recipient } = defineProps<{ recipient: string | LocationQueryValue[] }>();
 </script>

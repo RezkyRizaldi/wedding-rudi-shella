@@ -6,10 +6,10 @@
 					"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh,
 					pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
 				</p>
-				<figcaption class="mt-8 text-sm font-bold">QS. Ar-rum 30:21</figcaption>
 			</blockquote>
+			<figcaption class="mt-8 text-center text-sm font-bold">QS. Ar-rum 30:21</figcaption>
 		</figure>
 	</section>
 </template>
 
-<script setup></script>
+<script setup lang="ts"></script>

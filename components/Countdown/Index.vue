@@ -6,17 +6,19 @@
 				Jam berdetak begitu cepat, di antara momen mendebarkan yang belum pernah kami rasakan sebelumnya. Kami berharap dapat menyambut keluarga dan teman-teman untuk menyaksikan janji berkat kami di hari yang bahagia.
 			</p>
 		</div>
-		<VueCountdown :time="time" v-slot="{ days, hours, minutes, seconds }">
-			<div class="mx-auto grid max-w-2xl grid-cols-2 gap-5 p-10 md:grid-cols-4 md:gap-x-16 md:pt-14">
-				<CountdownBox desc="Hari" :time="days" data-aos="flip-up" data-aos-duration="1500" />
-				<CountdownBox desc="Jam" :time="hours" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="300" />
-				<CountdownBox desc="Menit" :time="minutes" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="500" />
-				<CountdownBox desc="Detik" :time="seconds" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="700" />
-			</div>
-		</VueCountdown>
+		<ClientOnly>
+			<VueCountdown :time="time" v-slot="{ days, hours, minutes, seconds }">
+				<div class="mx-auto grid max-w-2xl grid-cols-2 gap-5 p-10 md:grid-cols-4 md:gap-x-16 md:pt-14">
+					<CountdownBox desc="Hari" :time="days" data-aos="flip-up" data-aos-duration="1500" />
+					<CountdownBox desc="Jam" :time="hours" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="300" />
+					<CountdownBox desc="Menit" :time="minutes" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="500" />
+					<CountdownBox desc="Detik" :time="seconds" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="700" />
+				</div>
+			</VueCountdown>
+		</ClientOnly>
 	</section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 	const time = new Date('Feb 27, 2023 10:00:00').getTime() - new Date().getTime();
 </script>

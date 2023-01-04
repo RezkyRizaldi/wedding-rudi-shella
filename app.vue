@@ -21,7 +21,7 @@
 	</main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 	const {
 		query: { to },
 	} = useRoute();

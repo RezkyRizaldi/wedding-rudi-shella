@@ -17,12 +17,13 @@ import {
 	faPaperPlane,
 	faPeopleArrows,
 	faRing,
+	faShareNodes,
 	faSlash,
 	faThermometer,
 	faWandMagicSparkles,
 	faWineGlass,
 } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 config.autoAddCss = false;
 
@@ -45,9 +46,12 @@ library.add(
 	faPaperPlane,
 	faPeopleArrows,
 	faRing,
+	faShareNodes,
 	faSlash,
 	faThermometer,
+	faTwitter,
 	faWandMagicSparkles,
+	faWhatsapp,
 	faWineGlass
 );
 

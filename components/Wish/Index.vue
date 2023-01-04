@@ -2,7 +2,7 @@
 	<section class="bg-slate-800" id="wish">
 		<div class="mx-auto max-w-xs py-12 md:max-w-2xl md:py-16 lg:max-w-4xl">
 			<h2 class="text-center font-serif text-2xl uppercase tracking-widest text-white md:text-4xl" data-aos="zoom-in" data-aos-duration="750">Harapan & Do'a</h2>
-			<h5 class="mt-4 mb-10 text-center font-serif text-sm italic text-white md:text-base" data-aos="zoom-in" data-aos-duration="750">Sampaikan do'a dan ucapan terbaik Anda untuk kedua mempelai.</h5>
+			<h3 class="mt-4 mb-10 text-center font-serif text-sm italic text-white md:text-base" data-aos="zoom-in" data-aos-duration="750">Sampaikan do'a dan ucapan terbaik Anda untuk kedua mempelai.</h3>
 			<div class="rounded-2xl bg-white p-10">
 				<div class="space-y-6">
 					<span class="block text-center font-semibold">11 Komentar</span>
@@ -17,12 +17,19 @@
 						</div>
 					</div>
 					<hr class="h-0.5 bg-slate-800" />
-					<form class="space-y-4">
-						<input class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none" type="text" placeholder="Nama" aria-label="name" />
-						<textarea class="focus:shadow-outline w-full resize-none appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none" placeholder="Ucapan" rows="6"></textarea>
+					<form class="space-y-4" @submit.prevent="sendMessage">
+						<input class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none" type="text" placeholder="Nama" aria-label="name" v-model="name" />
+						<pre>{{ name }}</pre>
+						<textarea
+							class="focus:shadow-outline w-full resize-none appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
+							placeholder="Ucapan"
+							aria-label="message"
+							rows="6"
+							v-model="message"
+						></textarea>
 						<div class="relative inline-block w-full">
-							<select class="focus:shadow-outline block w-full appearance-none rounded border border-gray-400 bg-white px-4 py-2 pr-8 leading-tight shadow hover:border-gray-500 focus:outline-none">
-								<option selected>Konfirmasi Kehadiran</option>
+							<select class="focus:shadow-outline block w-full rounded border border-gray-400 bg-white px-4 py-2 pr-8 leading-tight shadow hover:border-gray-500 focus:outline-none" aria-label="attendance" v-model="attendance">
+								<option disabled value="">Konfirmasi Kehadiran</option>
 								<option>Hadir</option>
 								<option>Tidak Hadir</option>
 							</select>
@@ -33,7 +40,7 @@
 							</div>
 						</div>
 						<div class="text-right">
-							<button class="btn" type="submit" title="Kirim Pesan">Kirim</button>
+							<button class="btn" type="submit" title="Kirim Pesan" :disabled="isDisabled">Kirim</button>
 						</div>
 					</form>
 					<div class="max-h-40 w-full divide-y-2 overflow-y-scroll pr-4">
@@ -48,13 +55,23 @@
 						Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila {{ recipient }} berkenan hadir dan memberikan do'a restunya untuk keberkahan pernikahan kami.
 					</p>
 					<p class="text-sm text-white md:text-base" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">Atas do'a dan restunya, kami ucapkan terima kasih.</p>
-					<h2 class="font-serif text-3xl text-yellow-300/90" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">Rudi & Shella</h2>
+					<h3 class="font-serif text-3xl text-yellow-300/90" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">Rudi & Shella</h3>
 				</div>
 			</div>
 		</div>
 	</section>
 </template>
 
-<script setup>
-	const { recipient } = defineProps({ recipient: String });
+<script setup lang="ts">
+	import type { LocationQueryValue } from 'vue-router';
+
+	const { recipient } = defineProps<{ recipient: string | LocationQueryValue[] }>();
+	const name = ref('');
+	const message = ref('');
+	const attendance = ref('');
+	const isDisabled = computed(() => !name.value || !message.value || !attendance.value);
+
+	const sendMessage = () => {
+		window.open(`https://api.whatsapp.com/send/?phone=6281234567890?text=Saya%20${name.value}%20berkenan%20untuk%20${attendance.value}%20dan%20berpesan%0A${message.value}`, '_blank');
+	};
 </script>

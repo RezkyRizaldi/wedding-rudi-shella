@@ -15,10 +15,14 @@
 	</div>
 </template>
 
-<script setup>
-	const copy = async (text) => {
+<script setup lang="ts">
+	const copy = async (text: string) => {
+		const buttonText = document.getElementById('btnText');
+
+		if (!buttonText) return;
+
 		await navigator.clipboard.writeText(text);
 
-		document.getElementById('btnText').innerHTML = 'Berhasil disalin!';
+		buttonText.innerHTML = 'Berhasil disalin!';
 	};
 </script>

@@ -10,11 +10,11 @@
 			</div>
 			<div class="flex flex-col items-center justify-center gap-y-8 text-center md:gap-y-14 lg:gap-y-16">
 				<h2 class="text-sm font-semibold uppercase tracking-widest text-white md:text-xl">Pernikahan</h2>
-				<h1 class="font-body text-4xl text-yellow-300/90 md:text-6xl lg:text-7xl">Rudi & Shella</h1>
+				<h2 class="font-body text-4xl text-yellow-300/90 md:text-6xl lg:text-7xl">Rudi & Shella</h2>
 				<h2 class="text-sm font-semibold uppercase tracking-widest text-white md:text-xl">Februari 2022</h2>
 			</div>
 		</div>
 	</section>
 </template>
 
-<script setup></script>
+<script setup lang="ts"></script>

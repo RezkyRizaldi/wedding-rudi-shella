@@ -7,15 +7,9 @@
 	</div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 	const { icon, text } = defineProps({
-		icon: {
-			type: String,
-			required: true,
-		},
-		text: {
-			type: String,
-			required: true,
-		},
+		icon: { type: String, required: true },
+		text: { type: String, required: true },
 	});
 </script>

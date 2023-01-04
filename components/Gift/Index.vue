@@ -6,7 +6,7 @@
 				<div class="mx-auto w-2/4 py-4">
 					<hr class="h-0.5 bg-slate-800" />
 				</div>
-				<h5 class="my-6 text-center font-semibold md:my-8">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless.</h5>
+				<h3 class="my-6 text-center font-semibold md:my-8">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless.</h3>
 				<Disclosure>
 					<div class="text-center">
 						<DisclosureButton class="btn" title="Beri Kado">
@@ -35,6 +35,6 @@
 	</section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 	import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
 </script>

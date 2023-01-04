@@ -61,9 +61,11 @@ export default defineNuxtConfig({
 	},
 	modules: ['@nuxt/image-edge', '@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxtjs/color-mode', 'nuxt-swiper', '@nuxtjs/html-validator'],
 	runtimeConfig: {
-		appName: process.env.APP_NAME,
+		public: {
+			appURL: process.env.APP_URL,
+		},
 	},
-	ssr: false,
+	// ssr: false,
 	typescript: {
 		shim: false,
 	},

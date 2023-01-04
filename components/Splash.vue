@@ -1,8 +1,8 @@
 <template>
 	<div class="fixed top-0 left-0 z-50 h-screen w-screen bg-slate-800 transition duration-300" id="splash">
-		<div class="flex h-screen flex-col items-center justify-center gap-y-16">
+		<div class="flex h-full w-full flex-col items-center justify-center gap-y-16">
 			<div class="space-y-6 text-center md:space-y-14 lg:space-y-10">
-				<h5 class="font-serif text-xl text-white md:text-4xl">Undangan Pernikahan</h5>
+				<h1 class="font-serif text-xl text-white md:text-4xl">Undangan Pernikahan</h1>
 				<h2 class="font-body text-4xl text-yellow-300/90 md:text-7xl">Rudi & Shella</h2>
 				<span class="block font-serif text-white md:text-xl">Kepada Yth.</span>
 				<p class="font-serif text-xl font-bold text-white md:text-4xl">{{ recipient }}</p>
@@ -15,24 +15,29 @@
 			>
 				Buka Undangan
 			</button>
-			<p class="absolute bottom-5 text-xs font-semibold text-white">
-				Copyright &copy; 2022 <NuxtLink class="font-bold hover:underline" href="https://github.com/RezkyRizaldi" target="_blank" rel="noopener noreferrer">Muhamad Rezky Rizaldi</NuxtLink> | All Rights Reserved
+			<p class="absolute bottom-5 max-w-xs text-center text-xs font-semibold text-white md:max-w-full">
+				Copyright &copy; 2022 <a class="font-bold hover:underline" href="https://github.com/RezkyRizaldi" target="_blank" rel="noopener noreferrer">Muhamad Rezky Rizaldi</a> | All Rights Reserved
 			</p>
 		</div>
 	</div>
 </template>
 
-<script setup>
-	const { recipient } = defineProps({ recipient: { type: String, required: true } });
+<script setup lang="ts">
+	import type { LocationQueryValue } from 'vue-router';
 
-	const loadPage = () => {
+	const { recipient } = defineProps<{ recipient: string | LocationQueryValue[] }>();
+
+	const loadPage = async () => {
 		const main = document.querySelector('main');
 		const splash = document.getElementById('splash');
-		const audio = document.getElementById('audio');
+		const audio = document.getElementById('audio') as HTMLAudioElement | null;
+
+		if (!main || !splash || !audio) return;
 
 		document.body.classList.remove('overflow-hidden');
 		main.classList.remove('overflow-hidden');
 		splash.classList.add('opacity-0', 'hidden');
-		audio.play();
+
+		await audio.play();
 	};
 </script>
