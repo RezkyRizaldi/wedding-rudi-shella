@@ -19,7 +19,6 @@
 					<hr class="h-0.5 bg-slate-800" />
 					<form class="space-y-4" @submit.prevent="sendMessage">
 						<input class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none" type="text" placeholder="Nama" aria-label="name" v-model="name" />
-						<pre>{{ name }}</pre>
 						<textarea
 							class="focus:shadow-outline w-full resize-none appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
 							placeholder="Ucapan"
@@ -69,9 +68,31 @@
 	const name = ref('');
 	const message = ref('');
 	const attendance = ref('');
+	const wish = ref<Wish[] | null>(null);
+	const { getWishes, postWish } = useWish();
 	const isDisabled = computed(() => !name.value || !message.value || !attendance.value);
 
-	const sendMessage = () => {
-		window.open(`https://api.whatsapp.com/send/?phone=6281234567890?text=Saya%20${name.value}%20berkenan%20untuk%20${attendance.value}%20dan%20berpesan%0A${message.value}`, '_blank');
+	onBeforeMount(async () => await getMessages());
+
+	const getMessages = async () => {
+		try {
+			const res = (await getWishes()) as Wish[];
+
+			console.log(res);
+
+			wish.value = res;
+		} catch (error) {
+			console.error(error);
+		}
+	};
+
+	const sendMessage = async () => {
+		try {
+			const res = (await postWish({ name: name.value, message: message.value, attendance: attendance.value })) as Wish;
+
+			console.log(res);
+		} catch (error) {
+			console.error(error);
+		}
 	};
 </script>
