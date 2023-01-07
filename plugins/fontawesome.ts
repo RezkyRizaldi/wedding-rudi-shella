@@ -25,6 +25,7 @@ import {
 	faThermometer,
 	faWandMagicSparkles,
 	faWineGlass,
+	faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
@@ -58,7 +59,8 @@ library.add(
 	faTwitter,
 	faWandMagicSparkles,
 	faWhatsapp,
-	faWineGlass
+	faWineGlass,
+	faXmark
 );
 
 export default defineNuxtPlugin((nuxtApp) => {

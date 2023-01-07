@@ -14,6 +14,7 @@
     "nuxt": "^3.0.0",
     "prettier": "^2.8.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
+    "prisma": "^4.8.1",
     "vue-social-sharing": "^4.0.0-alpha4"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/html-validator": "^1.2.3",
     "@nuxtjs/tailwindcss": "^6.2.0",
+    "@prisma/client": "^4.8.1",
     "@tailwindcss/forms": "^0.5.3",
     "aos": "^2.3.4",
     "nuxt-swiper": "^0.1.6"
