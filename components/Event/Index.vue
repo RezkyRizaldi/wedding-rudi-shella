@@ -1,13 +1,13 @@
 <template>
-	<section class="bg-slate-800 text-center" id="event">
+	<section class="bg-gray-200 text-center dark:bg-slate-800" id="event">
 		<div class="py-12 md:py-24">
-			<h2 class="font-body text-4xl text-yellow-300/90 md:text-7xl" data-aos="zoom-in" data-aos-duration="750">Acara Pernikahan</h2>
+			<h2 class="font-body text-4xl text-yellow-800 dark:text-yellow-300/90 md:text-7xl" data-aos="zoom-in" data-aos-duration="750">Acara Pernikahan</h2>
 			<div class="mx-auto w-2/4 py-4 md:py-8">
-				<hr class="text-white" />
+				<hr class="border-slate-600 dark:border-gray-100" />
 			</div>
 			<div class="mx-auto w-3/4 md:w-2/3" data-aos="zoom-in" data-aos-duration="750">
-				<h3 class="mt-5 text-sm text-white md:text-lg">
-					Tanpa mengurangi rasa hormat, kami mengundang {{ recipient }} untuk dapat hadir pada acara <span class="font-semibold">Resepsi Pernikahan</span> putra dan putri kami yang insya Allah akan dilaksanakan pada
+				<h3 class="mt-5 text-sm font-semibold text-slate-600 dark:text-gray-100 md:text-lg">
+					Tanpa mengurangi rasa hormat, kami mengundang {{ recipient }} untuk dapat hadir pada acara <span class="font-bold">Resepsi Pernikahan</span> putra dan putri kami yang insya Allah akan dilaksanakan pada
 				</h3>
 			</div>
 		</div>

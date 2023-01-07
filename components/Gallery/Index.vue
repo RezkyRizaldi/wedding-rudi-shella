@@ -1,12 +1,12 @@
 <template>
-	<section class="bg-stone-200 text-center" id="gallery">
+	<section class="bg-stone-400 text-center dark:bg-stone-200" id="gallery">
 		<div class="pt-12 md:pt-20">
-			<h2 class="font-body text-5xl text-slate-800 md:text-7xl" data-aos="zoom-in" data-aos-duration="750">Galeri</h2>
+			<h2 class="font-body text-5xl text-gray-200 dark:text-slate-600 md:text-7xl" data-aos="zoom-in" data-aos-duration="750">Galeri</h2>
 			<div class="mx-auto w-2/3" data-aos="zoom-in" data-aos-duration="750">
-				<h3 class="mt-5 font-serif text-sm italic md:text-base">Setiap kisah cinta itu indah, tapi kisah cinta kita adalah favoritku.</h3>
+				<h3 class="mt-5 font-serif text-sm italic text-gray-200 dark:text-slate-600 md:text-base">Setiap kisah cinta itu indah, tapi kisah cinta kita adalah favoritku.</h3>
 			</div>
 			<div class="mx-auto w-2/4 py-6 md:py-8">
-				<hr class="h-0.5 bg-slate-800" />
+				<hr class="border-gray-200 dark:border-slate-600" />
 			</div>
 		</div>
 		<div class="mx-auto max-w-xs pb-20 md:max-w-2xl lg:max-w-4xl">

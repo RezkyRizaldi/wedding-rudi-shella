@@ -1,10 +1,10 @@
 <template>
-	<div class="fixed bottom-24 left-5 z-40 flex flex-col gap-y-4 md:bottom-5">
+	<div class="fixed bottom-[6.5rem] left-5 z-40 flex flex-col gap-y-4 md:bottom-5">
 		<button class="floating-btn" type="button" title="Bagikan" @click="isOpen = !isOpen">
 			<span class="sr-only">Bagikan</span>
-			<FontAwesomeIcon :icon="['fas', 'share-nodes']" inverse />
+			<FontAwesomeIcon :icon="['fas', 'share-nodes']" />
 		</button>
-		<div :class="`absolute -z-10 flex h-full w-full flex-col items-center justify-center gap-y-4 transition-transform duration-200 ${isOpen ? 'bottom-24 -translate-y-1/2' : 'bottom-0'}`">
+		<div :class="`absolute -z-10 flex h-full w-full flex-col items-center justify-center gap-y-4 transition-transform duration-200 ${isOpen ? 'bottom-[6.5rem] -translate-y-1/2' : 'bottom-0'}`">
 			<a
 				class="floating-btn w-full bg-[#128C7E] text-center hover:bg-[#128C7E]/80 focus:bg-[#128C7E]/80 active:bg-[#128C7E]/80"
 				:href="`https://api.whatsapp.com/send?text=Undangan%20Pernikahan%20Rudi%20%26%20Shella%0A${appURL}`"
@@ -38,13 +38,13 @@
 		</div>
 		<button class="floating-btn" type="button" :title="!isFullscreen ? 'Maximize' : 'Minimize'" @click="fullscreen">
 			<span class="sr-only">{{ !isFullscreen ? 'Maximize' : 'Minimize' }}</span>
-			<FontAwesomeIcon class="h-5 w-5" :icon="['fas', !isFullscreen ? 'maximize' : 'minimize']" inverse />
+			<FontAwesomeIcon class="h-5 w-5" :icon="['fas', !isFullscreen ? 'maximize' : 'minimize']" />
 		</button>
 		<button class="floating-btn" type="button" :title="!isAudioPlay ? 'Unmute BGM' : 'Mute BGM'" @click="handleBGM">
 			<span class="sr-only">{{ !isAudioPlay ? 'Unmute BGM' : 'Mute BGM' }}</span>
 			<FontAwesomeLayers class="!w-5">
-				<FontAwesomeIcon :icon="['fas', 'music']" inverse />
-				<FontAwesomeIcon v-show="isAudioPlay" :icon="['fas', 'slash']" inverse />
+				<FontAwesomeIcon :icon="['fas', 'music']" />
+				<FontAwesomeIcon v-show="isAudioPlay" :icon="['fas', 'slash']" />
 			</FontAwesomeLayers>
 		</button>
 	</div>

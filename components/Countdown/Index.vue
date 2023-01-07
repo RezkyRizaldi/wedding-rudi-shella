@@ -1,8 +1,8 @@
 <template>
-	<section class="bg-stone-200 py-6 text-center md:pt-10 md:pb-20">
-		<h2 class="font-serif text-xl font-bold uppercase tracking-[0.2em] text-yellow-800 md:text-4xl" data-aos="fade-up" data-aos-duration="1000">Menghitung Hari</h2>
+	<section class="bg-stone-400 py-6 text-center dark:bg-stone-200 md:pt-10 md:pb-20">
+		<h2 class="font-serif text-xl font-bold uppercase tracking-[0.2em] text-yellow-300/90 dark:text-yellow-800 md:text-4xl" data-aos="fade-up" data-aos-duration="1000">Menghitung Hari</h2>
 		<div class="mx-auto w-4/5 md:w-3/5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-			<p class="mt-6 font-serif text-sm italic text-gray-700">
+			<p class="mt-6 font-serif text-sm italic text-gray-200 dark:text-gray-700">
 				Jam berdetak begitu cepat, di antara momen mendebarkan yang belum pernah kami rasakan sebelumnya. Kami berharap dapat menyambut keluarga dan teman-teman untuk menyaksikan janji berkat kami di hari yang bahagia.
 			</p>
 		</div>
