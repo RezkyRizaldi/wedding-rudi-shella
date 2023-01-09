@@ -19,29 +19,36 @@
 					<hr class="h-0.5 bg-slate-800" />
 					<div class="mb-3 inline-flex w-full items-center rounded-lg bg-green-400 py-5 px-6 text-base text-gray-100" role="alert" v-show="showAlert">
 						Pesan Anda berhasil dikirim! Terima kasih telah mengirimkan pesan.
-						<button class="ml-auto border-none p-1 text-gray-100 transition-colors hover:text-white focus:outline-none" type="button" aria-label="Close" @click="showAlert = !showAlert">
+						<button class="ml-auto border-none p-1 text-gray-100 transition-colors focus:outline-none hover:text-white" type="button" aria-label="Close" @click="showAlert = !showAlert">
 							<FontAwesomeIcon class="fa-lg h-5 w-5" :icon="['fas', 'xmark']" />
 						</button>
 					</div>
 					<form class="space-y-4" @submit.prevent="sendMessage">
-						<input
-							class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 placeholder-stone-400 shadow focus:outline-none dark:placeholder-slate-800"
-							type="text"
-							placeholder="Nama"
-							aria-label="name"
-							v-model="name"
-						/>
-						<textarea
-							class="focus:shadow-outline w-full resize-none appearance-none rounded border py-2 px-3 leading-tight text-gray-700 placeholder-stone-400 shadow focus:outline-none dark:placeholder-slate-800"
-							placeholder="Ucapan"
-							aria-label="message"
-							rows="6"
-							v-model="message"
-						></textarea>
+						<div>
+							<label class="mb-1 block text-gray-200 dark:text-slate-600" for="name">Nama</label>
+							<input
+								class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 placeholder-stone-400 shadow focus:outline-none dark:placeholder-slate-800"
+								type="text"
+								placeholder="Nama"
+								id="name"
+								v-model="name"
+							/>
+						</div>
+						<div>
+							<label class="mb-1 block text-gray-200 dark:text-slate-600" for="message">Ucapan</label>
+							<textarea
+								class="focus:shadow-outline w-full resize-none appearance-none rounded border py-2 px-3 leading-tight text-gray-700 placeholder-stone-400 shadow focus:outline-none dark:placeholder-slate-800"
+								placeholder="Ucapan"
+								rows="6"
+								id="message"
+								v-model="message"
+							></textarea>
+						</div>
 						<div class="relative inline-block w-full">
+							<label class="mb-1 block text-gray-200 dark:text-slate-600" for="attendance">Konfirmasi Kehadiran</label>
 							<select
-								class="focus:shadow-outline block w-full rounded border border-gray-400 bg-white px-4 py-2 pr-8 leading-tight text-stone-400 shadow hover:border-gray-500 focus:outline-none dark:text-slate-800"
-								aria-label="attendance"
+								class="focus:shadow-outline block w-full rounded border border-gray-400 bg-white px-4 py-2 pr-8 leading-tight text-stone-400 shadow focus:outline-none hover:border-gray-500 dark:text-slate-800"
+								id="attendance"
 								v-model="attendance"
 							>
 								<option disabled value="">Konfirmasi Kehadiran</option>
@@ -55,13 +62,14 @@
 							</div>
 						</div>
 						<div class="text-right">
-							<button class="btn" type="submit" title="Kirim Pesan" :disabled="isDisabled">
-								<Loader class="h-6 w-6" v-show="loading" />
-								<span v-show="!loading">Kirim</span>
+							<button class="btn" type="submit" title="Kirim Pesan" :disabled="isDisabled || btnLoading">
+								<Loader class="h-6 w-6" v-if="btnLoading" />
+								<span v-else>Kirim</span>
 							</button>
 						</div>
 					</form>
-					<WishItem :wishes="wishes" :loading="loading" />
+					<span class="block text-center text-xs font-semibold" v-if="!wishes.length">Jadilah yang pertama untuk mengucapkan do'a kepada kedua mempelai.</span>
+					<WishItem :wishes="wishes" :loading="loading" v-else />
 				</div>
 			</div>
 			<div class="mt-12 flex flex-col-reverse items-center justify-center gap-y-10 md:mt-24 md:flex-row md:gap-y-0 md:gap-x-10">
@@ -83,11 +91,12 @@
 
 	const { recipient } = defineProps<{ recipient: string | LocationQueryValue[] }>();
 	const loading = ref(false);
+	const btnLoading = ref(false);
 	const showAlert = ref(false);
-	const name = ref('');
+	const name = ref(recipient);
 	const message = ref('');
 	const attendance = ref('');
-	const wishes = ref<Wish[] | null>(null);
+	const wishes = ref<Wish[]>([]);
 	const totalWish = ref(0);
 	const totalAttend = ref(0);
 	const totalMiss = ref(0);
@@ -101,10 +110,12 @@
 		try {
 			const { data } = await useFetch<PrismaWish>('/api/wish');
 
-			wishes.value = data.value!.wishes;
-			totalWish.value = data.value!.totalWish;
-			totalAttend.value = data.value!.totalAttend;
-			totalMiss.value = data.value!.totalMiss;
+			if (data.value) {
+				wishes.value = data.value.wishes;
+				totalWish.value = data.value.totalWish;
+				totalAttend.value = data.value.totalAttend;
+				totalMiss.value = data.value.totalMiss;
+			}
 		} catch (error) {
 			console.error(error);
 		} finally {
@@ -113,7 +124,7 @@
 	};
 
 	const sendMessage = async () => {
-		loading.value = true;
+		btnLoading.value = true;
 
 		try {
 			await useFetch<Wish>('/api/wish', {
@@ -133,7 +144,7 @@
 		} catch (error) {
 			console.error(error);
 		} finally {
-			loading.value = false;
+			btnLoading.value = false;
 
 			await getMessages();
 		}

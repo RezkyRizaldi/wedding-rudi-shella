@@ -3,10 +3,10 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			bodyAttrs: {
-				class: 'overflow-hidden scroll-smooth',
+				class: 'overflow-hidden scroll-smooth scrollbar-thin scrollbar-track-gray-600 scrollbar-thumb-gray-200 scrollbar-track-rounded-full scrollbar-thumb-rounded-full dark:scrollbar-track-slate-800 dark:scrollbar-thumb-gray-100',
 			},
 			htmlAttrs: {
-				lang: 'en',
+				lang: 'id',
 				translate: 'no',
 			},
 			link: [
@@ -68,7 +68,6 @@ export default defineNuxtConfig({
 			appURL: process.env.APP_URL,
 		},
 	},
-	// ssr: false,
 	typescript: {
 		shim: false,
 	},

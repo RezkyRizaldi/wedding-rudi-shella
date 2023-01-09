@@ -15,6 +15,7 @@
     "prettier": "^2.8.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
     "prisma": "^4.8.1",
+    "tailwind-scrollbar": "^2.1.0",
     "vue-social-sharing": "^4.0.0-alpha4"
   },
   "dependencies": {

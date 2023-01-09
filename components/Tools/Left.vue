@@ -6,7 +6,7 @@
 		</button>
 		<div :class="`absolute -z-10 flex h-full w-full flex-col items-center justify-center gap-y-4 transition-transform duration-200 ${isOpen ? 'bottom-[6.5rem] -translate-y-1/2' : 'bottom-0'}`">
 			<a
-				class="floating-btn w-full bg-[#128C7E] text-center hover:bg-[#128C7E]/80 focus:bg-[#128C7E]/80 active:bg-[#128C7E]/80"
+				class="floating-btn w-full bg-[#128C7E] text-center hover:bg-[#128C7E]/80 focus:bg-[#128C7E]/80 active:bg-[#128C7E]/80 dark:bg-[#128C7E] dark:hover:bg-[#128C7E]/80 dark:focus:bg-[#128C7E]/80 dark:active:bg-[#128C7E]/80"
 				:href="`https://api.whatsapp.com/send?text=Undangan%20Pernikahan%20Rudi%20%26%20Shella%0A${appURL}`"
 				target="_blank"
 				rel="noopener noreferrer"
@@ -16,7 +16,7 @@
 				<FontAwesomeIcon :icon="['fab', 'whatsapp']" inverse />
 			</a>
 			<a
-				class="floating-btn w-full bg-[#1DA1F2] text-center hover:bg-[#1DA1F2]/80 focus:bg-[#1DA1F2]/80 active:bg-[#1DA1F2]/80"
+				class="floating-btn w-full bg-[#1DA1F2] text-center hover:bg-[#1DA1F2]/80 focus:bg-[#1DA1F2]/80 active:bg-[#1DA1F2]/80 dark:bg-[#1DA1F2] dark:hover:bg-[#1DA1F2]/80 dark:focus:bg-[#1DA1F2]/80 dark:active:bg-[#1DA1F2]/80"
 				:href="`https://twitter.com/share?text=Undangan%20Pernikahan%20Rudi%20%26%20Shella%0A&url=${appURL}`"
 				target="_blank"
 				rel="noopener noreferrer"
@@ -26,7 +26,7 @@
 				<FontAwesomeIcon :icon="['fab', 'twitter']" inverse />
 			</a>
 			<a
-				class="floating-btn w-full bg-[#1877F2] text-center hover:bg-[#1877F2]/80 focus:bg-[#1877F2]/80 active:bg-[#1877F2]/80"
+				class="floating-btn w-full bg-[#1877F2] text-center hover:bg-[#1877F2]/80 focus:bg-[#1877F2]/80 active:bg-[#1877F2]/80 dark:bg-[#1877F2] dark:hover:bg-[#1877F2]/80 dark:focus:bg-[#1877F2]/80 dark:active:bg-[#1877F2]/80"
 				:href="`https://www.facebook.com/sharer.php?u=${appURL}`"
 				target="_blank"
 				rel="noopener noreferrer"

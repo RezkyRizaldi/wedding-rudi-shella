@@ -15,4 +15,7 @@ model Wish {
   name        String
   message     String
   attendance  String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
