@@ -102,7 +102,7 @@
 	const totalMiss = ref(0);
 	const isDisabled = computed(() => !name.value || !message.value || !attendance.value);
 
-	onMounted(async () => await getMessages());
+	onBeforeMount(async () => await getMessages());
 
 	const getMessages = async () => {
 		loading.value = true;
