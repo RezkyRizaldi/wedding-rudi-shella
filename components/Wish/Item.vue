@@ -21,9 +21,12 @@
 					/>
 				</div>
 				<div class="flex-1">
-					<h2 class="inline-block font-bold text-gray-200 dark:text-black">{{ wish.name }}</h2>
-					<FontAwesomeIcon class="ml-1 text-red-500" :icon="['fas', 'circle-xmark']" size="xs" v-if="wish.attendance === 'Tidak Hadir'" />
-					<FontAwesomeIcon class="ml-1 text-green-500" :icon="['fas', 'circle-check']" size="xs" v-else />
+					<div class="flex items-center gap-x-1.5">
+						<h2 class="align-middle font-bold text-gray-200 dark:text-black">{{ wish.name }}</h2>
+						<FontAwesomeIcon class="text-red-500" :icon="['fas', 'circle-xmark']" size="xs" v-if="wish.attendance === 'Tidak Hadir'" />
+						<FontAwesomeIcon class="text-green-500" :icon="['fas', 'circle-check']" size="xs" v-else />
+						<span class="text-xs text-gray-200 dark:text-gray-500">{{ formatDate(wish.createdAt) }}</span>
+					</div>
 					<p class="text-xs font-semibold text-gray-200 dark:text-gray-500">
 						{{ wish.message }}
 					</p>
@@ -34,5 +37,9 @@
 </template>
 
 <script setup lang="ts">
+	import moment, { MomentInput } from 'moment';
+
 	const { wishes, loading } = defineProps<{ wishes: Wish[]; loading: boolean }>();
+
+	const formatDate = (date: MomentInput) => moment(date).fromNow();
 </script>

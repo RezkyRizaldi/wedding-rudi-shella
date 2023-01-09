@@ -8,7 +8,7 @@
 				<p class="font-serif text-xl font-bold text-slate-600 dark:text-gray-100 md:text-4xl">{{ recipient }}</p>
 			</div>
 			<button
-				class="rounded-lg border border-slate-800 px-4 py-2 font-serif text-sm font-semibold uppercase tracking-widest text-slate-600 transition-colors hover:bg-slate-800 hover:text-gray-100 focus:ring-1 focus:ring-slate-800 active:ring-1 active:ring-slate-800 dark:border-gray-100 dark:text-gray-100 dark:hover:bg-gray-100 dark:hover:text-slate-600 dark:focus:ring-gray-100 dark:active:ring-gray-100 md:text-base"
+				class="rounded-lg border border-slate-800 px-4 py-2 font-serif text-sm font-semibold uppercase tracking-widest text-slate-600 transition-colors focus:ring-1 focus:ring-slate-800 hover:bg-slate-800 hover:text-gray-100 active:ring-1 active:ring-slate-800 dark:border-gray-100 dark:text-gray-100 dark:focus:ring-gray-100 dark:hover:bg-gray-100 dark:hover:text-slate-600 dark:active:ring-gray-100 md:text-base"
 				type="button"
 				title="Buka Undangan"
 				@click="loadPage"
@@ -35,8 +35,7 @@
 		if (!main || !splash || !audio) return;
 
 		document.body.classList.remove('overflow-hidden');
-		document.body.classList.add('overflow-auto');
-		main.classList.remove('overflow-hidden');
+		document.documentElement.classList.remove('overflow-hidden');
 		splash.classList.add('opacity-0', 'hidden');
 
 		await audio.play();

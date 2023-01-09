@@ -3,9 +3,10 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			bodyAttrs: {
-				class: 'overflow-hidden scroll-smooth scrollbar-thin scrollbar-track-gray-600 scrollbar-thumb-gray-200 scrollbar-track-rounded-full scrollbar-thumb-rounded-full dark:scrollbar-track-slate-800 dark:scrollbar-thumb-gray-100',
+				class: 'relative overflow-hidden scroll-smooth scrollbar-thin scrollbar-track-gray-600 scrollbar-thumb-gray-200 scrollbar-track-rounded-full scrollbar-thumb-rounded-full dark:scrollbar-track-slate-800 dark:scrollbar-thumb-gray-100',
 			},
 			htmlAttrs: {
+				class: 'overflow-hidden',
 				lang: 'id',
 				translate: 'no',
 			},

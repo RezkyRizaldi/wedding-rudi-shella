@@ -1,5 +1,5 @@
 <template>
-	<main class="overflow-hidden antialiased">
+	<main class="antialiased">
 		<audio class="hidden" id="audio" loop src="/audio/bgm.mp3"></audio>
 		<Splash :recipient="recipient" />
 		<About />

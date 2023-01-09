@@ -27,9 +27,9 @@
 						<div>
 							<label class="mb-1 block text-gray-200 dark:text-slate-600" for="name">Nama</label>
 							<input
-								class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 placeholder-stone-400 shadow focus:outline-none dark:placeholder-slate-800"
+								class="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 placeholder-stone-400 shadow focus:outline-none dark:placeholder-slate-400"
 								type="text"
-								placeholder="Nama"
+								placeholder="Nama Lengkap"
 								id="name"
 								v-model="name"
 							/>
@@ -37,28 +37,30 @@
 						<div>
 							<label class="mb-1 block text-gray-200 dark:text-slate-600" for="message">Ucapan</label>
 							<textarea
-								class="focus:shadow-outline w-full resize-none appearance-none rounded border py-2 px-3 leading-tight text-gray-700 placeholder-stone-400 shadow focus:outline-none dark:placeholder-slate-800"
-								placeholder="Ucapan"
+								class="focus:shadow-outline w-full resize-none appearance-none rounded border py-2 px-3 leading-tight text-gray-700 placeholder-stone-400 shadow focus:outline-none dark:placeholder-slate-400"
+								placeholder="Sampaikan ucapan untuk kedua mempelai"
 								rows="6"
 								id="message"
 								v-model="message"
 							></textarea>
 						</div>
-						<div class="relative inline-block w-full">
+						<div>
 							<label class="mb-1 block text-gray-200 dark:text-slate-600" for="attendance">Konfirmasi Kehadiran</label>
-							<select
-								class="focus:shadow-outline block w-full rounded border border-gray-400 bg-white px-4 py-2 pr-8 leading-tight text-stone-400 shadow focus:outline-none hover:border-gray-500 dark:text-slate-800"
-								id="attendance"
-								v-model="attendance"
-							>
-								<option disabled value="">Konfirmasi Kehadiran</option>
-								<option>Hadir</option>
-								<option>Tidak Hadir</option>
-							</select>
-							<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-								<svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-									<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-								</svg>
+							<div class="relative inline-block w-full">
+								<select
+									class="focus:shadow-outline block w-full rounded border border-gray-400 bg-white px-4 py-2 pr-8 leading-tight text-stone-400 shadow focus:outline-none hover:border-gray-500 dark:text-slate-400"
+									id="attendance"
+									v-model="attendance"
+								>
+									<option disabled value="">Konfirmasi Kehadiran</option>
+									<option>Hadir</option>
+									<option>Tidak Hadir</option>
+								</select>
+								<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+									<svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+										<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+									</svg>
+								</div>
 							</div>
 						</div>
 						<div class="text-right">
