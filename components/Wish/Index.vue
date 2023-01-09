@@ -68,8 +68,7 @@
 							</button>
 						</div>
 					</form>
-					<span class="block text-center text-xs font-semibold" v-if="!wishes.length">Jadilah yang pertama untuk mengucapkan do'a kepada kedua mempelai.</span>
-					<WishItem :wishes="wishes" :loading="loading" v-else />
+					<WishItem :wishes="wishes" :loading="loading" />
 				</div>
 			</div>
 			<div class="mt-12 flex flex-col-reverse items-center justify-center gap-y-10 md:mt-24 md:flex-row md:gap-y-0 md:gap-x-10">
@@ -102,7 +101,7 @@
 	const totalMiss = ref(0);
 	const isDisabled = computed(() => !name.value || !message.value || !attendance.value);
 
-	onBeforeMount(async () => await getMessages());
+	onMounted(async () => await getMessages());
 
 	const getMessages = async () => {
 		loading.value = true;
