@@ -22,7 +22,7 @@
 				</div>
 				<div class="flex-1">
 					<div class="flex items-center gap-x-1.5">
-						<h2 class="align-middle font-bold text-gray-200 dark:text-black">{{ wish.name }}</h2>
+						<h2 class="break-all text-sm font-bold text-gray-200 dark:text-black">{{ wish.name }}</h2>
 						<FontAwesomeIcon class="text-red-500" :icon="['fas', 'circle-xmark']" size="xs" v-if="wish.attendance === 'Tidak Hadir'" />
 						<FontAwesomeIcon class="text-green-500" :icon="['fas', 'circle-check']" size="xs" v-else />
 						<span class="text-xs text-gray-200 dark:text-gray-500">{{ formatDate(wish.createdAt) }}</span>

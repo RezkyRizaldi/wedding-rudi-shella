@@ -10,7 +10,6 @@ export default defineEventHandler(async () => {
 			orderBy: {
 				createdAt: 'desc',
 			},
-			take: 10,
 		});
 		const totalWish = await prisma.wish.count();
 		const totalAttend = await prisma.wish.count({

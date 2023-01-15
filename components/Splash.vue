@@ -8,9 +8,10 @@
 				<p class="font-serif text-xl font-bold text-slate-600 dark:text-gray-100 md:text-4xl">{{ recipient }}</p>
 			</div>
 			<button
-				class="rounded-lg border border-slate-800 px-4 py-2 font-serif text-sm font-semibold uppercase tracking-widest text-slate-600 transition-colors focus:ring-1 focus:ring-slate-800 hover:bg-slate-800 hover:text-gray-100 active:ring-1 active:ring-slate-800 dark:border-gray-100 dark:text-gray-100 dark:focus:ring-gray-100 dark:hover:bg-gray-100 dark:hover:text-slate-600 dark:active:ring-gray-100 md:text-base"
+				class="rounded-lg border border-slate-800 px-4 py-2 font-serif text-sm font-semibold uppercase tracking-widest text-slate-600 transition-colors focus:ring-1 focus:ring-slate-800 disabled:border-sky-900 disabled:text-slate-700 hover:bg-slate-800 hover:text-gray-100 active:ring-1 active:ring-slate-800 dark:border-gray-100 dark:text-gray-100 dark:focus:ring-gray-100 dark:disabled:border-gray-300 dark:disabled:text-gray-300 dark:hover:bg-gray-100 dark:hover:text-slate-600 dark:active:ring-gray-100 md:text-base"
 				type="button"
 				title="Buka Undangan"
+				:disabled="isDisabled"
 				@click="loadPage"
 			>
 				Buka Undangan
@@ -26,6 +27,11 @@
 	import type { LocationQueryValue } from 'vue-router';
 
 	const { recipient } = defineProps<{ recipient: string | LocationQueryValue[] }>();
+	const isDisabled = ref(true);
+
+	onMounted(() => {
+		isDisabled.value = false;
+	});
 
 	const loadPage = async () => {
 		const main = document.querySelector('main');
