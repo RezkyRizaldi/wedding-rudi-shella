@@ -41,12 +41,14 @@
 	import Pusher from 'pusher-js';
 
 	const { wishes, loading } = defineProps<{ wishes: Wish[]; loading: boolean }>();
-	const config = useRuntimeConfig();
-	const pusher = new Pusher('ed7d2c84b6efca921b88', {
-		cluster: 'ap1',
+	const {
+		public: { pusher },
+	} = useRuntimeConfig();
+	const pusherInstance = new Pusher(pusher.key, {
+		cluster: pusher.cluster,
 		forceTLS: true,
 	});
-	const channel = pusher.subscribe('wish-channel');
+	const channel = pusherInstance.subscribe('wish-channel');
 
 	channel.bind('wish-event', (data: Wish) => {
 		wishes.push(data);
