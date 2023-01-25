@@ -17,6 +17,7 @@
 							.map((n) => n.charAt(0).toUpperCase())
 							.join('')}`"
 						:alt="wish.name"
+						loading="lazy"
 					/>
 				</div>
 				<div class="flex-1">
