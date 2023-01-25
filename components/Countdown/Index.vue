@@ -20,5 +20,5 @@
 </template>
 
 <script setup lang="ts">
-	const time = new Date('Feb 27, 2023 10:00:00').getTime() - new Date().getTime();
+	const time = new Date('Feb 19, 2023 09:00:00').getTime() - new Date().getTime();
 </script>

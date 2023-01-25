@@ -69,6 +69,7 @@ export default defineNuxtConfig({
 			appURL: process.env.APP_URL,
 		},
 	},
+	ssr: false,
 	typescript: {
 		shim: false,
 	},

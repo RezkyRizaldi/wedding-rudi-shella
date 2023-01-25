@@ -6,7 +6,7 @@
 				<FontAwesomeIcon class="h-5 w-5" :icon="['fas', currentThemeColor]" />
 			</ListboxButton>
 			<ListboxOptions class="space-y-4">
-				<ListboxOption class="floating-btn ui-active:bg-blue-500" :title="theme.name" v-for="theme in themes" :key="theme.id" :value="theme.value">
+				<ListboxOption class="floating-btn ui-active:bg-blue-500" :title="theme.name" v-for="theme in themes.filter((theme) => theme.value !== $colorMode.preference)" :key="theme.id" :value="theme.value">
 					<FontAwesomeIcon class="h-5 w-5" :icon="['fas', theme.icon]" />
 				</ListboxOption>
 			</ListboxOptions>
