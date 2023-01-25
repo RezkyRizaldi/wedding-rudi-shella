@@ -42,8 +42,9 @@
 
 	const { wishes, loading } = defineProps<{ wishes: Wish[]; loading: boolean }>();
 	const config = useRuntimeConfig();
-	const pusher = new Pusher(config.public.pusher.key, {
-		cluster: config.public.pusher.cluster,
+	const pusher = new Pusher('ed7d2c84b6efca921b88', {
+		cluster: 'ap1',
+		forceTLS: true,
 	});
 	const channel = pusher.subscribe('wish-channel');
 
