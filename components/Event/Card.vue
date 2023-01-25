@@ -5,6 +5,8 @@
 		<div class="py-4 md:py-8">
 			<h3 class="font-serif text-xl text-yellow-300/90 dark:text-yellow-800 md:text-2xl lg:text-3xl">Minggu</h3>
 			<h3 class="font-serif text-xl text-yellow-300/90 dark:text-yellow-800 md:text-2xl lg:text-3xl">19 Februari 2023</h3>
+			<h3 class="font-serif text-xl text-yellow-300/90 dark:text-yellow-800 md:text-2xl lg:text-3xl">Minggu</h3>
+			<h3 class="font-serif text-xl text-yellow-300/90 dark:text-yellow-800 md:text-2xl lg:text-3xl">19 Februari 2023</h3>
 		</div>
 		<span class="font-serif text-lg text-gray-200 dark:text-slate-600 md:text-xl">{{ time }}</span>
 		<div class="flex items-center justify-center gap-x-3 py-10">
