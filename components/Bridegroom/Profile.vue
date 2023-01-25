@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="flex flex-col items-center gap-y-10">
-			<NuxtImg
+			<img
 				class="h-60 w-60 rounded-full border-4 border-yellow-800 shadow-2xl dark:border-yellow-300/90 lg:h-96 lg:w-96"
 				src="https://via.placeholder.com/400x200?text=Bride+Image"
 				alt="Bride Image"

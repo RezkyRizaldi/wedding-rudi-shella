@@ -74,7 +74,7 @@
 				</div>
 			</div>
 			<div class="mt-12 flex flex-col-reverse items-center justify-center gap-y-10 md:mt-24 md:flex-row md:gap-y-0 md:gap-x-10">
-				<NuxtImg class="h-80 w-[28rem] rounded-lg" src="/images/wish.jpg" alt="Bride Image" loading="lazy" data-aos="fade-right" data-aos-duration="1000" />
+				<img class="h-80 w-[28rem] rounded-lg" src="/images/wish.jpg" alt="Bride Image" loading="lazy" data-aos="fade-right" data-aos-duration="1000" />
 				<div class="space-y-8 text-center">
 					<p class="text-sm text-slate-600 dark:text-gray-200 md:text-base" data-aos="fade-down" data-aos-duration="1000">
 						Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila {{ recipient }} berkenan hadir dan memberikan do'a restunya untuk keberkahan pernikahan kami.

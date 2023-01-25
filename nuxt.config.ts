@@ -63,7 +63,7 @@ export default defineNuxtConfig({
 		},
 		preload: true,
 	},
-	modules: ['@nuxt/image-edge', '@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxtjs/color-mode', 'nuxt-swiper', '@nuxtjs/html-validator'],
+	modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxtjs/color-mode', 'nuxt-swiper', '@nuxtjs/html-validator'],
 	runtimeConfig: {
 		public: {
 			appURL: process.env.APP_URL,

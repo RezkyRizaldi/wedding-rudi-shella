@@ -10,7 +10,7 @@
 			</div>
 			<div class="flex gap-x-3 border-gray-200 py-4 hover:bg-stone-500/50 dark:border-slate-600 dark:hover:bg-gray-300/50" v-for="wish in wishes" :key="wish.id" v-else>
 				<div class="h-8 w-8 overflow-hidden">
-					<NuxtImg
+					<img
 						class="rounded-full object-contain"
 						:src="`https://via.placeholder.com/200x200?text=${wish.name
 							.split(' ')
