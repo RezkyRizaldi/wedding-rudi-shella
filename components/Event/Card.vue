@@ -13,7 +13,7 @@
 			<hr class="w-full border-gray-200 dark:border-slate-800 md:w-32" />
 		</div>
 		<div class="flex flex-col items-center justify-center gap-y-3 lg:gap-y-5">
-			<p class="font-serif text-sm text-gray-200 dark:text-slate-600 md:text-base">Gedung Pernikahan</p>
+			<p class="font-serif text-sm text-gray-200 dark:text-slate-600 md:text-base">Lokasi Acara</p>
 			<p class="font-serif text-sm text-gray-200 dark:text-slate-600 md:text-base">Jl. Sayati Hilir No.51, Sayati, Kec. Margahayu, Kabupaten Bandung, Jawa Barat 40228 (Gor SMK Marhas / Gor Lukmaul Hakim)</p>
 		</div>
 		<div class="mt-8">
