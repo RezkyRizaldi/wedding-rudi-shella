@@ -13,8 +13,8 @@
 		</div>
 		<div class="mx-auto max-w-xs lg:max-w-4xl">
 			<div class="flex flex-col items-center justify-center gap-y-10 pb-14 md:flex-row md:gap-y-0 md:gap-x-10 md:pb-20">
-				<EventCard icon="ring" title="Akad Nikah" time="Pukul 09:00 - 10:00 WIB" data-aos="flip-right" data-aos-duration="750" />
-				<EventCard icon="wine-glass" title="Resepsi" time="Pukul 10:00 WIB - Selesai" data-aos="flip-left" data-aos-duration="750" />
+				<EventCard icon="ring" title="Akad Nikah" time="Pukul 09:00 - Selesai" data-aos="flip-right" data-aos-duration="750" />
+				<EventCard icon="wine-glass" title="Resepsi" time="Pukul 11:00 WIB - Selesai" data-aos="flip-left" data-aos-duration="750" />
 			</div>
 		</div>
 	</section>

@@ -4,12 +4,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-	--swiper-theme-color: rgb(71 85 105 / var(--tw-bg-opacity));
-}
-
-html:not(.dark) .swiper-button-prev,
-html:not(.dark) .swiper-button-next {
-	--swiper-theme-color: rgb(156 163 175 / var(--tw-bg-opacity));
+	--swiper-theme-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 *[class*='dark:']:not(.transition-transform, .transition-opacity) {
@@ -18,10 +13,10 @@ html:not(.dark) .swiper-button-next {
 
 @layer components {
 	.btn {
-		@apply rounded-lg bg-gray-600 px-4 py-2 text-sm font-semibold text-gray-100 transition-colors hover:bg-gray-700 hover:text-white focus:ring focus:ring-gray-500 active:ring active:ring-gray-500 dark:bg-slate-800 dark:hover:bg-slate-900 dark:focus:ring-slate-500 dark:active:ring-slate-500 md:text-base;
+		@apply rounded-lg bg-gray-600 px-4 py-2 text-sm font-semibold text-gray-100 transition-colors focus:ring focus:ring-gray-500 hover:bg-gray-700 hover:text-white active:ring active:ring-gray-500 dark:bg-slate-800 dark:focus:ring-slate-500 dark:hover:bg-slate-900 dark:active:ring-slate-500 md:text-base;
 	}
 
 	.floating-btn {
-		@apply rounded-full bg-gray-400 p-3 font-semibold leading-tight text-slate-600 shadow-md transition hover:bg-gray-500 hover:text-gray-300 hover:shadow-lg focus:bg-gray-700 focus:text-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:text-gray-300 active:shadow-lg dark:bg-slate-600 dark:text-gray-100 dark:hover:bg-slate-700 dark:focus:bg-slate-700 dark:active:bg-slate-800;
+		@apply rounded-full bg-gray-400 p-3 font-semibold leading-tight text-slate-600 shadow-md transition focus:bg-gray-700 focus:text-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 hover:bg-gray-500 hover:text-gray-300 hover:shadow-lg active:bg-gray-800 active:text-gray-300 active:shadow-lg dark:bg-slate-600 dark:text-gray-100 dark:focus:bg-slate-700 dark:hover:bg-slate-700 dark:active:bg-slate-800;
 	}
 }
