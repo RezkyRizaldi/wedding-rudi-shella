@@ -38,8 +38,18 @@
 
 <script setup lang="ts">
 	import moment, { MomentInput } from 'moment';
+	import Pusher from 'pusher-js';
 
 	const { wishes, loading } = defineProps<{ wishes: Wish[]; loading: boolean }>();
+	const config = useRuntimeConfig();
+	const pusher = new Pusher(config.public.pusher.key, {
+		cluster: config.public.pusher.cluster,
+	});
+	const channel = pusher.subscribe('wish-channel');
+
+	channel.bind('wish-event', (data: Wish) => {
+		wishes.push(data);
+	});
 
 	const formatDate = (date: MomentInput) => moment(date).fromNow();
 </script>
