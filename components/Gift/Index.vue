@@ -27,7 +27,6 @@
 						<DisclosurePanel class="mt-10">
 							<div class="flex flex-col items-center justify-center gap-y-10 md:flex-row md:gap-y-0 md:gap-x-10">
 								<GiftCard />
-								<GiftCard />
 							</div>
 						</DisclosurePanel>
 					</transition>

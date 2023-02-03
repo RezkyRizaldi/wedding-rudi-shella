@@ -5,11 +5,11 @@
 		</div>
 		<div class="space-y-3 pt-3 md:pt-5">
 			<hr class="border-slate-600" />
-			<span class="block text-sm font-bold uppercase tracking-[0.3em] md:text-base">Nama Pemilik</span>
-			<span class="block text-sm font-bold uppercase tracking-[0.3em] md:text-base">0000-999-000</span>
-			<button class="flex w-full items-center justify-center rounded bg-blue-800 px-4 py-1.5 text-sm text-white md:text-base" type="button" @click="copy('xxxxxxxx')" title="Salin ke Clipboard">
+			<span class="block text-sm font-bold uppercase tracking-[0.3em] md:text-base">Shella Febriyanti</span>
+			<span class="block text-sm font-bold uppercase tracking-[0.3em] md:text-base">7840-284-799</span>
+			<button id="btnGift" class="flex w-full items-center justify-center rounded bg-blue-800 px-4 py-1.5 text-sm text-white md:text-base" type="button" @click="copy('7840284799')" title="Salin ke Clipboard">
 				<FontAwesomeIcon :icon="['fas', 'copy']" />
-				<span id="btnText" class="flex-1">Salin</span>
+				<span id="btnGiftText" class="flex-1">Salin</span>
 			</button>
 		</div>
 	</div>
@@ -17,12 +17,22 @@
 
 <script setup lang="ts">
 	const copy = async (text: string) => {
-		const buttonText = document.getElementById('btnText');
+		const btnGift = document.getElementById('btnGift');
 
-		if (!buttonText) return;
+		if (!btnGift) return;
+
+		const btnGiftText = btnGift.lastElementChild;
+
+		if (!btnGiftText) return;
 
 		await navigator.clipboard.writeText(text);
 
-		buttonText.innerHTML = 'Berhasil disalin!';
+		btnGift.setAttribute('title', 'Berhasil disalin');
+		btnGiftText.innerHTML = 'Berhasil disalin';
+
+		setTimeout(() => {
+			btnGift.setAttribute('title', 'Salin ke Clipboard');
+			btnGiftText.innerHTML = 'Salin';
+		}, 3000);
 	};
 </script>

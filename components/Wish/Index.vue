@@ -52,9 +52,9 @@
 									id="attendance"
 									v-model="attendance"
 								>
-									<option disabled value="">Konfirmasi Kehadiran</option>
-									<option>Hadir</option>
-									<option>Tidak Hadir</option>
+									<option class="text-black" disabled value="">Konfirmasi Kehadiran</option>
+									<option class="text-black">Hadir</option>
+									<option class="text-black">Tidak Hadir</option>
 								</select>
 								<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
 									<svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -88,6 +88,7 @@
 </template>
 
 <script setup lang="ts">
+	import Pusher from 'pusher-js';
 	import type { LocationQueryValue } from 'vue-router';
 
 	const { recipient } = defineProps<{ recipient: string | LocationQueryValue[] }>();
@@ -103,7 +104,23 @@
 	const totalMiss = ref(0);
 	const isDisabled = computed(() => !name.value || !message.value || !attendance.value);
 
-	onMounted(async () => await getMessages());
+	const {
+		public: { pusher },
+	} = useRuntimeConfig();
+	const pusherInstance = new Pusher(pusher.key, {
+		cluster: pusher.cluster,
+		forceTLS: true,
+	});
+
+	onMounted(async () => {
+		const channel = pusherInstance.subscribe('wish-channel');
+
+		channel.bind('wish-event', (data: Wish) => {
+			wishes.value.push(data);
+		});
+
+		await getMessages();
+	});
 
 	const getMessages = async () => {
 		loading.value = true;

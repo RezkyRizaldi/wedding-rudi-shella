@@ -14,7 +14,7 @@
 		</div>
 		<div class="flex flex-col items-center justify-center gap-y-3 lg:gap-y-5">
 			<p class="font-serif text-sm text-gray-200 dark:text-slate-600 md:text-base">Lokasi Acara</p>
-			<p class="font-serif text-sm text-gray-200 dark:text-slate-600 md:text-base">Jl. Sayati Hilir No.51, Sayati, Kec. Margahayu, Kabupaten Bandung, Jawa Barat 40228 (Gor SMK Marhas / Gor Lukmaul Hakim)</p>
+			<p class="font-serif text-sm text-gray-200 dark:text-slate-600 md:text-base">Jl. Sayati Hilir No.51 RT 03 RW 08, Sayati, Kec. Margahayu, Kabupaten Bandung, Jawa Barat 40228 (Gor SMK Marhas / Gor Lukmaul Hakim)</p>
 		</div>
 		<div class="mt-8">
 			<a class="btn" href="https://goo.gl/maps/Xjsg6CXUwzvWBd1Q7" target="_blank" rel="noopener noreferrer" title="Lihat Maps">

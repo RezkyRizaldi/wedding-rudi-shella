@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<span class="block text-center text-xs font-semibold" v-if="!wishes.length">Jadilah yang pertama untuk mengucapkan do'a kepada kedua mempelai.</span>
+		<span class="block text-center text-xs font-semibold text-gray-200 dark:text-gray-500" v-if="!wishes.length">Jadilah yang pertama untuk mengucapkan do'a kepada kedua mempelai.</span>
 		<div
 			class="max-h-44 w-full divide-y overflow-y-auto pr-4 scrollbar-thin scrollbar-track-gray-600 scrollbar-thumb-gray-200 scrollbar-track-rounded-full scrollbar-thumb-rounded-full dark:scrollbar-track-slate-800 dark:scrollbar-thumb-gray-100"
 			v-else
@@ -38,21 +38,8 @@
 
 <script setup lang="ts">
 	import moment, { MomentInput } from 'moment';
-	import Pusher from 'pusher-js';
 
 	const { wishes, loading } = defineProps<{ wishes: Wish[]; loading: boolean }>();
-	const {
-		public: { pusher },
-	} = useRuntimeConfig();
-	const pusherInstance = new Pusher(pusher.key, {
-		cluster: pusher.cluster,
-		forceTLS: true,
-	});
-	const channel = pusherInstance.subscribe('wish-channel');
-
-	channel.bind('wish-event', (data: Wish) => {
-		wishes.push(data);
-	});
 
 	const formatDate = (date: MomentInput) => moment(date).fromNow();
 </script>
