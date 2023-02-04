@@ -45,7 +45,7 @@
 	const imgIndex = ref(0);
 	const visible = ref(false);
 	let num = 0;
-	const images = ['/images/gallery4.jpg', '/images/gallery5.jpg', '/images/gallery6.jpg', '/images/gallery7.jpg', '/images/gallery8.jpg', '/images/gallery9.jpg', '/images/gallery10.jpg', '/images/gallery11.jpg'];
+	const images = ['/images/gallery4.jpg', '/images/gallery5.jpg', '/images/gallery6.jpg', '/images/gallery7.jpg', '/images/gallery8.jpg', '/images/gallery9.jpg'];
 
 	const show = (index: number) => {
 		imgIndex.value = index;

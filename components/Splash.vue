@@ -1,5 +1,6 @@
 <template>
-	<div class="fixed top-0 left-0 z-50 h-screen w-screen bg-gray-200 transition duration-300 dark:bg-slate-800" id="splash">
+	<div class="fixed top-0 left-0 z-50 h-screen w-screen bg-[url('/images/gallery4.jpg')] bg-cover bg-center bg-no-repeat md:bg-[50%_25%]" id="splash">
+		<div class="absolute inset-0 -z-10 bg-black/50"></div>
 		<div class="flex h-full w-full flex-col items-center justify-center gap-y-16">
 			<div class="space-y-6 text-center md:space-y-14 lg:space-y-10">
 				<h1 class="font-serif text-xl text-slate-600 dark:text-gray-100 md:text-4xl">Undangan Pernikahan</h1>
