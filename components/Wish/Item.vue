@@ -1,7 +1,7 @@
 <template>
 	<div class="overflow-y-auto scrollbar-thin scrollbar-track-gray-600 scrollbar-thumb-gray-200 scrollbar-track-rounded-full scrollbar-thumb-rounded-full dark:scrollbar-track-slate-800 dark:scrollbar-thumb-gray-100">
 		<span class="block text-center text-xs font-semibold text-gray-200 dark:text-gray-500" v-if="!wishes.length">Jadilah yang pertama untuk mengucapkan do'a kepada kedua mempelai.</span>
-		<div class="max-h-44 w-full divide-y p-4" v-else>
+		<div class="max-h-44 w-full divide-y pr-4" v-else>
 			<div class="flex items-center justify-center overflow-hidden" v-if="loading">
 				<Loader class="mr-3 -ml-1 h-8 w-8" />
 			</div>
