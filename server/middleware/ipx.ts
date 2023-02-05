@@ -8,5 +8,5 @@ export default defineEventHandler(() => {
 		sharp: {},
 	});
 
-	return createIPXMiddleware(ipx);
+	createIPXMiddleware(ipx);
 });
