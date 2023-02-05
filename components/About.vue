@@ -5,7 +5,7 @@
 				<ClientOnly>
 					<Swiper class="h-full w-full" :modules="[SwiperAutoplay, SwiperEffectFade]" :slidesPerView="1" :loop="true" effect="fade" :autoplay="{ delay: 3000, disableOnInteraction: true }">
 						<SwiperSlide v-for="slide in 5" :key="slide">
-							<img class="h-full w-full bg-center object-cover" :src="`/images/about${slide}.jpg`" :alt="`Bride Image ${slide}`" loading="lazy" />
+							<NuxtImg class="h-full w-full" :src="`/images/about${slide}.jpg`" :alt="`Bride Image ${slide}`" loading="lazy" fit="cover" format="webp" />
 						</SwiperSlide>
 					</Swiper>
 				</ClientOnly>

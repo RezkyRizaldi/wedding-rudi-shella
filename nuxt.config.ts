@@ -16,6 +16,7 @@ export default defineNuxtConfig({
 				{ rel: 'shortcut icon', href: '/favicon.ico' },
 				{ rel: 'apple-touch-icon', href: '/favicon/favicon-16x16.png', sizes: '16x16x' },
 				{ rel: 'apple-touch-icon', href: '/favicon/favicon-32x32.png', sizes: '32x32' },
+				{ rel: 'preload', as: 'image', href: '/images/gallery4.jpg' },
 			],
 			meta: [
 				{ name: 'robots', content: 'index, follow' },
@@ -63,7 +64,7 @@ export default defineNuxtConfig({
 		},
 		preload: true,
 	},
-	modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxtjs/color-mode', 'nuxt-swiper', '@nuxtjs/html-validator'],
+	modules: ['@nuxt/image-edge', '@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxtjs/color-mode', 'nuxt-swiper', '@nuxtjs/html-validator'],
 	runtimeConfig: {
 		public: {
 			appURL: process.env.APP_URL,
