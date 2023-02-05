@@ -3,7 +3,7 @@
 		<div class="mx-auto max-w-xs py-12 md:max-w-2xl md:py-16 lg:max-w-4xl">
 			<h2 class="text-center font-serif text-2xl uppercase tracking-widest text-slate-600 dark:text-gray-100 md:text-4xl" data-aos="zoom-in" data-aos-duration="750">Harapan & Do'a</h2>
 			<h3 class="mt-4 mb-10 text-center font-serif text-sm italic text-slate-600 dark:text-gray-100 md:text-base" data-aos="zoom-in" data-aos-duration="750">Sampaikan do'a dan ucapan terbaik Anda untuk kedua mempelai.</h3>
-			<div class="rounded-2xl bg-stone-400 p-10 shadow dark:bg-gray-200">
+			<div class="rounded-2xl bg-stone-400 p-8 shadow dark:bg-gray-200">
 				<div class="space-y-6">
 					<span class="block text-center font-semibold text-gray-200 dark:text-slate-600">{{ totalWish }} Komentar</span>
 					<div class="flex items-center justify-center gap-x-10">
