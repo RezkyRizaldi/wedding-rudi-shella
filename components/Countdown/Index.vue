@@ -20,6 +20,6 @@
 </template>
 
 <script setup lang="ts">
-	const countdown = new Date('Feb 19, 2023 09:00:00').getTime() - new Date().getTime();
+	const countdown = new Date('Feb 19, 2023 08:00:00').getTime() - new Date().getTime();
 	const time = countdown < 0 ? 0 : countdown;
 </script>
