@@ -10,23 +10,21 @@
 			</div>
 		</div>
 		<div class="mx-auto max-w-xs pb-20 md:max-w-2xl lg:max-w-4xl">
-			<ClientOnly>
-				<Swiper
-					class="h-full w-full"
-					:spaceBetween="20"
-					:modules="[SwiperNavigation]"
-					:breakpoints="{ 320: { slidesPerView: 1, spaceBetween: 20 }, 480: { slidesPerView: 2, spaceBetween: 20 }, 640: { slidesPerView: 3, spaceBetween: 20 } }"
-					navigation
-					:slidesPerView="3"
-					:loop="true"
-				>
-					<SwiperSlide class="group" v-for="slide in 3" :key="slide">
-						<div class="overflow-hidden">
-							<img class="h-full w-full bg-center object-cover transition-transform duration-1000 group-hover:scale-125" :src="`/images/gallery${slide}.jpg`" :alt="`Bride Image ${slide}`" loading="lazy" />
-						</div>
-					</SwiperSlide>
-				</Swiper>
-			</ClientOnly>
+			<Swiper
+				class="h-full w-full"
+				:spaceBetween="20"
+				:modules="[SwiperNavigation]"
+				:breakpoints="{ 320: { slidesPerView: 1, spaceBetween: 20 }, 480: { slidesPerView: 2, spaceBetween: 20 }, 640: { slidesPerView: 3, spaceBetween: 20 } }"
+				navigation
+				:slidesPerView="3"
+				:loop="true"
+			>
+				<SwiperSlide class="group" v-for="slide in 3" :key="slide">
+					<div class="overflow-hidden">
+						<img class="h-full w-full bg-center object-cover transition-transform duration-1000 group-hover:scale-125" :src="`/images/gallery${slide}.jpg`" :alt="`Bride Image ${slide}`" loading="lazy" />
+					</div>
+				</SwiperSlide>
+			</Swiper>
 			<div class="mt-5 grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-6">
 				<ClientOnly>
 					<LightBox :visible="visible" :index="imgIndex" :imgs="images" @hide="visible = !visible" />
