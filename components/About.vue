@@ -13,7 +13,7 @@
 			<div class="flex flex-col items-center justify-center gap-y-8 text-center md:gap-y-14 lg:gap-y-16">
 				<h2 class="text-sm font-semibold uppercase tracking-widest text-slate-600 dark:text-gray-100 md:text-xl">Pernikahan</h2>
 				<h2 class="font-body text-4xl text-yellow-800 dark:text-yellow-300/90 md:text-6xl lg:text-7xl">Rudi & Shella</h2>
-				<h2 class="text-sm font-semibold uppercase tracking-widest text-slate-600 dark:text-gray-100 md:text-xl">19 Februari 2022</h2>
+				<h2 class="text-sm font-semibold uppercase tracking-widest text-slate-600 dark:text-gray-100 md:text-xl">19 Februari 2023</h2>
 			</div>
 		</div>
 	</section>
