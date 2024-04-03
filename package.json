@@ -11,7 +11,7 @@
     "@nuxtjs/google-fonts": "^3.0.0-1",
     "@types/aos": "^3.0.4",
     "moment": "^2.29.4",
-    "nuxt": "^3.10.2",
+    "nuxt": "^3.11.1",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.2",
     "prisma": "^4.10.1",
